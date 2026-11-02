@@ -1,0 +1,12 @@
+name : My First CI Pipeline Using GH
+on:
+  push:
+    branch: main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+      - name: Run a one-line script
+        run:  chmod +x hello.sh && sh hello.sh
